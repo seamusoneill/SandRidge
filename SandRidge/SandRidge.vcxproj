@@ -11,7 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="inc\Player.cpp" />
     <ClCompile Include="src\BaseObject.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\FontTexture.cpp" />
@@ -19,6 +18,7 @@
     <ClCompile Include="src\GameActor.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
     <ClCompile Include="src\Timer.cpp" />
