@@ -13,6 +13,7 @@ public:
 	static AudioManager* instance();
 	Mix_Music* ambient;
 	Mix_Chunk* steps;
+	void LoadAudio();//can change how this is set up. can pass the sdl mixer if we have resource loader
 	void PlayAmbientAudio();
 	void PlayWalkingGrass();
 	//can add other audio functions for different sound effects.
