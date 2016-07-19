@@ -67,10 +67,10 @@ void BaseObject::free()
 	{
 		SDL_DestroyTexture(mTexture);
 		mTexture = NULL;
-		mWidth = 0;
-		mHeight = 0;
 		mPosX = 0;
 		mPosY = 0;
+		mWidth = 0;
+		mHeight = 0;
 		mAngle = 0.0;
 		mCentrePoint = NULL;
 		mClip = NULL;

@@ -6,3 +6,5 @@
 *.opensdf
 *.sdf
 *.suo
+*.ilk
+*.exe
