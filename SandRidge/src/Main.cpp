@@ -1,6 +1,6 @@
 #include <SDL.h>
 #include <SDL_image.h>
-#include <SDL_mixer.h>
+//#include <SDL_mixer.h>
 #include <SDL_ttf.h>
 #include <stdio.h>
 #include <string>
@@ -12,6 +12,7 @@
 #include "InputManager.h"
 #include "Timer.h"
 #include "Game.h"
+#include "AudioManager.h"
 
 using namespace std;
 
@@ -21,7 +22,6 @@ void close();
 
 SDL_Joystick* gameController = NULL;
 SDL_Haptic* controllerHaptic = NULL;
-
 Game* game;
 
 bool init(){
@@ -72,6 +72,10 @@ bool init(){
 				}
 			}
 		}
+		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0){
+			printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
+		}
+		AudioManager::instance()->LoadAudio();
 		//Initialise SceneManager
 		SceneManager::instance();
 	}
@@ -106,7 +110,7 @@ int main(int argc, char* args[])
 	bool quit = false; //Main loop flag
 
 	int countedFrames = 0;
-
+	AudioManager::instance()->PlayAmbientAudio();
 	//While applcation is running
 	while (!quit)
 	{

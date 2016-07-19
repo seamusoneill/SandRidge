@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="src\BaseObject.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\FontTexture.cpp" />
@@ -22,6 +23,7 @@
     <ClCompile Include="src\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioManager.h" />
     <ClInclude Include="inc\BaseObject.h" />
     <ClInclude Include="inc\Camera.h" />
     <ClInclude Include="inc\CONSTANTS.h" />
