@@ -11,8 +11,8 @@ AudioManager* AudioManager::instance() {
 }
 
 void AudioManager::LoadAudio(){
-	ambient = Mix_LoadMUS("ambient.wav");
-	steps = Mix_LoadWAV("steps.wav");//example sounds
+	ambient = Mix_LoadMUS("res/snd/mus/ambient.wav");
+	steps = Mix_LoadWAV("res/snd/fx/steps.wav");//example sounds
 	if (ambient == NULL || steps == NULL)
 	{
 		cout << "Failed to load some Audio files" << endl;

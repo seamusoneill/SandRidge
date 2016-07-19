@@ -11,11 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="src\AudioManager.cpp" />
+    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\BaseObject.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\FontTexture.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\GameActor.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Scene.cpp" />
@@ -23,13 +25,15 @@
     <ClCompile Include="src\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="inc\AudioManager.h" />
     <ClInclude Include="inc\BaseObject.h" />
     <ClInclude Include="inc\Camera.h" />
     <ClInclude Include="inc\CONSTANTS.h" />
     <ClInclude Include="inc\FontTexture.h" />
     <ClInclude Include="inc\Game.h" />
+    <ClInclude Include="inc\GameActor.h" />
     <ClInclude Include="inc\InputManager.h" />
+    <ClInclude Include="inc\Player.h" />
     <ClInclude Include="inc\Scene.h" />
     <ClInclude Include="inc\SceneManager.h" />
     <ClInclude Include="inc\Timer.h" />

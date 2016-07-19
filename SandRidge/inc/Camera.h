@@ -13,7 +13,7 @@ public:
 	static Camera* instance();
 
 	void update();
-	void render(SDL_Texture* texture, int x, int y, int width, int height, SDL_Rect* clip = NULL, double angle = 0.0f, SDL_Point* centre = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
+	void render(SDL_Texture* texture, int x, int y, int width, int height, double angle = 0.0f, SDL_Point* centre = NULL, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
 
 private:
 	Camera();
