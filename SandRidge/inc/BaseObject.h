@@ -12,7 +12,11 @@ class BaseObject
 public:
 	BaseObject();
 	~BaseObject();
-	
+
+	//Initialise method
+	virtual bool initialise(SDL_Texture* texture = NULL, int posX = 0, int posY = 0, int width = 0, int height = 0,
+		float angle = 0.0f, SDL_Point* centrePoint = NULL, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE) = 0; 
+
 	//Update method
 	virtual void update(float dt) = 0;
 

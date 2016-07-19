@@ -2,11 +2,37 @@
 
 Game::Game()
 {
-
+	createScene();
 }
 
 Game::~Game()
 {
+	disposeScene();
+}
+
+bool Game::createScene()
+{
+	bool success = true;
+
+	mPlayer = new Player();
+	mPlayer->initialise(NULL,100,100,32,32);
+
+	gameObject.push_back(mPlayer);
+
+	return success;
+}
+
+bool Game::disposeScene()
+{
+	bool success = true;
+
+	for (int i = 0; i < gameObject.size(); i++)
+	{
+		gameObject[i]->~BaseObject();
+		//TODO remove from vector
+	}
+
+	return success;
 }
 
 bool Game::update(float dt)
@@ -21,7 +47,13 @@ bool Game::update(float dt)
 		{
 			return true;
 		}
+		else mPlayer->handleEvent(e);
+	}
 
+	//Update objects
+	for (int i = 0; i < gameObject.size(); i++)
+	{
+		gameObject[i]->update(dt);
 	}
 
 	//Clear screen
@@ -29,7 +61,10 @@ bool Game::update(float dt)
 	SDL_RenderClear(SceneRenderer);
 
 	//Render objects
-	
+	for (int i = 0; i < gameObject.size(); i++)
+	{
+		gameObject[i]->render();
+	}
 
 	//Update screen
 	SDL_RenderPresent(SceneRenderer);

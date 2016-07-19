@@ -54,7 +54,7 @@ void Camera::update()
 #pragma endregion 
 }
 
-void Camera::render(SDL_Texture* texture, int x, int y, int width, int height, SDL_Rect* clip, double angle, SDL_Point* centre, SDL_RendererFlip flip)
+void Camera::render(SDL_Texture* texture, int x, int y, int width, int height, double angle, SDL_Point* centre, SDL_Rect* clip, SDL_RendererFlip flip)
 {	
 	//Set rendering space and render to screen
 	SDL_Rect renderQuad = { x - mPosX, y - mPosY, width, height };

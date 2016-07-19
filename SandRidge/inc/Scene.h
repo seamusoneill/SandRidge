@@ -12,7 +12,8 @@ public:
 	void render();
 
 protected:
-
+	virtual bool createScene();
+	virtual bool disposeScene();
 };
 
 #endif //!_SCENE_H_
