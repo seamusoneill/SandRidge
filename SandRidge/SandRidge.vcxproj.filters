@@ -57,13 +57,16 @@
     <ClCompile Include="src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameActor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\AudioManager.cpp">
       <Filter>Source Files</Filter>
-	</ClCompile>
+    </ClCompile>
     <ClCompile Include="src\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameActor.cpp">
+    <ClCompile Include="src\ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -97,16 +100,22 @@
     </ClInclude>
     <ClInclude Include="inc\AudioManager.h">
       <Filter>Header Files</Filter>
-	</ClInclude>
+    </ClInclude>
     <ClInclude Include="inc\GameActor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\img\dot.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\default.png">
       <Filter>Resource Files\img</Filter>
     </Image>
   </ItemGroup>
@@ -117,5 +126,28 @@
     <Font Include="res\font\testFont.TTF">
       <Filter>Resource Files\font</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\snd\fx\high.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\low.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\medium.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\Scratch1.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\steps.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\mus\ambient.wav">
+      <Filter>Resource Files\snd\mus</Filter>
+    </Media>
+    <Media Include="res\snd\mus\default.wav">
+      <Filter>Resource Files\snd\mus</Filter>
+    </Media>
   </ItemGroup>
 </Project>
