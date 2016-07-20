@@ -8,6 +8,7 @@
 
 #include "CONSTANTS.h"
 #include "SceneManager.h"
+#include "ResourceManager.h"
 #include "FontTexture.h"
 #include "InputManager.h"
 #include "Timer.h"
@@ -75,7 +76,11 @@ bool init(){
 		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0){
 			printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
 		}
-		AudioManager::instance()->LoadAudio();
+
+		//Initialise ResourceManager. Warning: Must be done before AudioManager
+		ResourceManager::instance()->loadAllMedia();
+		//Initialise AudioManager
+		AudioManager::instance();
 		//Initialise SceneManager
 		SceneManager::instance();
 	}
@@ -110,7 +115,7 @@ int main(int argc, char* args[])
 	bool quit = false; //Main loop flag
 
 	int countedFrames = 0;
-	AudioManager::instance()->PlayAmbientAudio();
+
 	//While applcation is running
 	while (!quit)
 	{

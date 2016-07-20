@@ -25,6 +25,9 @@ bool Game::createScene()
 	}
 	gameObject.push_back(mPlayer);
 
+
+	AudioManager::instance()->PlayAmbientAudio();
+
 	return success;
 }
 

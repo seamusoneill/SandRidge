@@ -10,6 +10,8 @@
 
 #include "CONSTANTS.h"
 #include "Scene.h"
+#include "AudioManager.h"
+
 
 class SceneManager
 {
