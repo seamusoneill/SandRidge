@@ -13,6 +13,7 @@ Game::~Game()
 bool Game::createScene()
 {
 	bool success = true;
+	srand(time(NULL));
 
 	mPlayer = new Player();
 	mPlayer->initialise(NULL,100,100,32,32);

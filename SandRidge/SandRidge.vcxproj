@@ -23,6 +23,7 @@
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
     <ClCompile Include="src\Timer.cpp" />
+    <ClCompile Include="Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\AudioManager.h" />
@@ -37,6 +38,7 @@
     <ClInclude Include="inc\Scene.h" />
     <ClInclude Include="inc\SceneManager.h" />
     <ClInclude Include="inc\Timer.h" />
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\img\dot.png" />
