@@ -1,7 +1,7 @@
 //To load a new file:
 //Add the file name to the appropriate list in setMediaToLoad()
-//Audio files go in the base project folder (.wav only)
-//Image files go in the images sub folder (.png only)
+//Audio files go in the snd subfolder folder (.wav only)
+//Image files go in the img subfolder (.png only)
 
 #include "ResourceManager.h"
 ResourceManager* ResourceManager::m_instance = 0;
