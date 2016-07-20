@@ -13,10 +13,16 @@ Game::~Game()
 bool Game::createScene()
 {
 	bool success = true;
+	srand(time(NULL));
 
 	mPlayer = new Player();
 	mPlayer->initialise(NULL,100,100,32,32);
 
+	for (size_t i = 0; i < 5; i++){//just 5 as example
+		mTrees.push_back(new Tree());
+		mTrees[i]->initialise(NULL, 200, i * 64, 64, 64);
+		gameObject.push_back(mTrees[i]);
+	}
 	gameObject.push_back(mPlayer);
 
 
