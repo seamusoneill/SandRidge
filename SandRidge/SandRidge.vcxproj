@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AudioManager.cpp" />
-    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\BaseObject.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\FontTexture.cpp" />
@@ -21,6 +20,7 @@
     <ClCompile Include="src\InputManager.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
     <ClCompile Include="src\Timer.cpp" />
@@ -35,16 +35,27 @@
     <ClInclude Include="inc\GameActor.h" />
     <ClInclude Include="inc\InputManager.h" />
     <ClInclude Include="inc\Player.h" />
+    <ClInclude Include="inc\ResourceManager.h" />
     <ClInclude Include="inc\Scene.h" />
     <ClInclude Include="inc\SceneManager.h" />
     <ClInclude Include="inc\Timer.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\img\default.png" />
     <Image Include="res\img\dot.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\font\default.ttf" />
     <Font Include="res\font\testFont.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\snd\fx\high.wav" />
+    <Media Include="res\snd\fx\low.wav" />
+    <Media Include="res\snd\fx\medium.wav" />
+    <Media Include="res\snd\fx\Scratch1.wav" />
+    <Media Include="res\snd\fx\steps.wav" />
+    <Media Include="res\snd\mus\ambient.wav" />
+    <Media Include="res\snd\mus\default.wav" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{526CA2EF-1E0D-4BFB-A026-DADA1C230AED}</ProjectGuid>
