@@ -5,9 +5,7 @@
 #include "SceneManager.h"
 #include "InputManager.h"
 #include "Player.h"
-#include "Tree.h"
 #include <vector>
-#include <ctime>
 
 class Game : Scene{
 public:
@@ -23,6 +21,5 @@ private:
 	std::vector<BaseObject*> gameObject;
 
 	Player* mPlayer;
-	std::vector<Tree*> mTrees;
 };
 #endif //!_GAME_H_
