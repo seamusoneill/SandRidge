@@ -1,52 +1,153 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\AudioManager.cpp" />
-    <ClCompile Include="src\BaseObject.cpp" />
-    <ClCompile Include="src\Camera.cpp" />
-    <ClCompile Include="src\FontTexture.cpp" />
-    <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\GameActor.cpp" />
-    <ClCompile Include="src\InputManager.cpp" />
-    <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\Player.cpp" />
-    <ClCompile Include="src\ResourceManager.cpp" />
-    <ClCompile Include="src\Scene.cpp" />
-    <ClCompile Include="src\SceneManager.cpp" />
-    <ClCompile Include="src\Timer.cpp" />
-    <ClCompile Include="src\Tree.cpp" />
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\img">
+      <UniqueIdentifier>{34e3cbd5-5a8b-4a92-a2dc-97b518f51c5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\snd">
+      <UniqueIdentifier>{17f88cfd-bf13-49fb-bbc5-b8107b2b2eec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\font">
+      <UniqueIdentifier>{85f18a70-47f4-422c-be0f-b3b669b49e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\snd\fx">
+      <UniqueIdentifier>{824fad8f-a382-4a59-90bb-76917a61ab7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\snd\mus">
+      <UniqueIdentifier>{ba41214e-faa2-4a7c-89e3-f88a2f7111c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\AudioManager.h" />
-    <ClInclude Include="inc\BaseObject.h" />
-    <ClInclude Include="inc\Camera.h" />
-    <ClInclude Include="inc\CONSTANTS.h" />
-    <ClInclude Include="inc\FontTexture.h" />
-    <ClInclude Include="inc\Game.h" />
-    <ClInclude Include="inc\GameActor.h" />
-    <ClInclude Include="inc\InputManager.h" />
-    <ClInclude Include="inc\Player.h" />
-    <ClInclude Include="inc\ResourceManager.h" />
-    <ClInclude Include="inc\Scene.h" />
-    <ClInclude Include="inc\SceneManager.h" />
-    <ClInclude Include="inc\Timer.h" />
-    <ClInclude Include="inc\Tree.h" />
+    <ClCompile Include="src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FontTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BaseObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameActor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AudioManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="res\snd\fx\high.wav" />
-    <Media Include="res\snd\fx\low.wav" />
-    <Media Include="res\snd\fx\medium.wav" />
-    <Media Include="res\snd\fx\Scratch1.wav" />
-    <Media Include="res\snd\fx\steps.wav" />
-    <Media Include="res\snd\mus\ambient.wav" />
-    <Media Include="res\snd\mus\default.wav" />
+    <ClInclude Include="inc\CONSTANTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\FontTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\SceneManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\BaseObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\AudioManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\GameActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\img\default.png" />
-    <Image Include="res\img\dot.png" />
+    <Image Include="res\img\dot.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\default.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="res\font\default.ttf" />
-    <Font Include="res\font\testFont.TTF" />
+    <Font Include="res\font\default.ttf">
+      <Filter>Resource Files\font</Filter>
+    </Font>
+    <Font Include="res\font\testFont.TTF">
+      <Filter>Resource Files\font</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\snd\fx\high.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\low.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\medium.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\Scratch1.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\fx\steps.wav">
+      <Filter>Resource Files\snd\fx</Filter>
+    </Media>
+    <Media Include="res\snd\mus\ambient.wav">
+      <Filter>Resource Files\snd\mus</Filter>
+    </Media>
+    <Media Include="res\snd\mus\default.wav">
+      <Filter>Resource Files\snd\mus</Filter>
+    </Media>
   </ItemGroup>
 </Project>
