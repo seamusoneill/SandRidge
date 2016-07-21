@@ -2,7 +2,7 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
-#include "SceneManager.h"
+#include "Scene.h"
 #include "InputManager.h"
 #include "Player.h"
 #include <vector>

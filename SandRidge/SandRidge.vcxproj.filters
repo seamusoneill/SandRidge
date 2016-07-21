@@ -69,6 +69,9 @@
     <ClCompile Include="src\ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\CONSTANTS.h">
@@ -110,12 +113,33 @@
     <ClInclude Include="inc\ResourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Tree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\img\dot.png">
       <Filter>Resource Files\img</Filter>
     </Image>
     <Image Include="res\img\default.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\tree1.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\tree2.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\tree3.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\tree4.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\trees.png">
       <Filter>Resource Files\img</Filter>
     </Image>
   </ItemGroup>

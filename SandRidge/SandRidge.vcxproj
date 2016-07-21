@@ -24,11 +24,13 @@
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
     <ClCompile Include="src\Timer.cpp" />
+    <ClCompile Include="src\Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\AudioManager.h" />
     <ClInclude Include="inc\BaseObject.h" />
     <ClInclude Include="inc\Camera.h" />
+    <ClInclude Include="inc\Command.h" />
     <ClInclude Include="inc\CONSTANTS.h" />
     <ClInclude Include="inc\FontTexture.h" />
     <ClInclude Include="inc\Game.h" />
@@ -39,10 +41,16 @@
     <ClInclude Include="inc\Scene.h" />
     <ClInclude Include="inc\SceneManager.h" />
     <ClInclude Include="inc\Timer.h" />
+    <ClInclude Include="inc\Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\img\default.png" />
     <Image Include="res\img\dot.png" />
+    <Image Include="res\img\tree1.png" />
+    <Image Include="res\img\tree2.png" />
+    <Image Include="res\img\tree3.png" />
+    <Image Include="res\img\tree4.png" />
+    <Image Include="res\img\trees.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\font\default.ttf" />

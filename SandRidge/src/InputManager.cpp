@@ -1,4 +1,5 @@
 #include "InputManager.h"
+#include "Command.h"
 
 InputManager* InputManager::m_instance = 0;
 InputManager::InputManager() {}
@@ -9,7 +10,7 @@ InputManager* InputManager::instance() {
 	return m_instance;
 }
 
-void InputManager::HandleInput(SDL_Event* e)
+Command* InputManager::HandleInput(SDL_Event* e)
 {
 	switch (e->type)
 	{
@@ -17,6 +18,7 @@ void InputManager::HandleInput(SDL_Event* e)
 		if (e->key.keysym.sym == SDLK_SPACE)
 		{
 			currentKeyStates = SDL_GetKeyboardState(NULL);
+			return mSpacebar;
 		}
 		break;
 	case SDL_KEYUP:
@@ -24,4 +26,5 @@ void InputManager::HandleInput(SDL_Event* e)
 	default:
 		break;
 	}
+	return NULL;
 }

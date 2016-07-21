@@ -11,9 +11,10 @@ public:
 	GameActor();
 	~GameActor();
 
-protected:
-
 	virtual void walk() = 0;
+	virtual void shoot() = 0;
+
+protected:
 
 };
 
