@@ -21,6 +21,10 @@ void AudioManager::PlayWalkingGrass(){
 	Mix_PlayChannel(-1, ResourceManager::instance()->getSfx("steps"), 0);
 }
 
+void AudioManager::PlayShoot(){
+	Mix_PlayChannel(-1, ResourceManager::instance()->getSfx("high"), 0);
+}
+
 AudioManager::~AudioManager()
 {
 }

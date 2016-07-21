@@ -81,5 +81,10 @@ void Player::walk()
 	mPosY += mVelY;
 }
 
+void Player::shoot()
+{
+	AudioManager::instance()->PlayShoot();
+}
+
 void Player::punch()
 {}

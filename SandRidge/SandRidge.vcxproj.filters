@@ -116,6 +116,9 @@
     <ClInclude Include="inc\Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\img\dot.png">

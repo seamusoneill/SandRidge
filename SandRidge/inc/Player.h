@@ -22,6 +22,7 @@ private:
 	int mVelX, mVelY;
 
 	void walk();
+	void shoot();
 	void punch();
 };
 

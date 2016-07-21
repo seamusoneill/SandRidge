@@ -30,6 +30,7 @@
     <ClInclude Include="inc\AudioManager.h" />
     <ClInclude Include="inc\BaseObject.h" />
     <ClInclude Include="inc\Camera.h" />
+    <ClInclude Include="inc\Command.h" />
     <ClInclude Include="inc\CONSTANTS.h" />
     <ClInclude Include="inc\FontTexture.h" />
     <ClInclude Include="inc\Game.h" />

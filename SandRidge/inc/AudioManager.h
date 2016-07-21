@@ -15,6 +15,7 @@ public:
 	Mix_Chunk* steps;
 	void PlayAmbientAudio();
 	void PlayWalkingGrass();
+	void PlayShoot();
 	//can add other audio functions for different sound effects.
 
 
