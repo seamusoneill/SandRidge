@@ -8,7 +8,8 @@ class Command
 {
 public:
 	virtual ~Command() {}
-	virtual void execute(GameActor& actor) = 0;
+	virtual void execute() {}
+	virtual void execute(GameActor& actor) {}
 protected:
 	Command() {}
 };
