@@ -16,3 +16,8 @@ bool Scene::update(float dt)
 
 void Scene::render()
 {}
+
+Scene::SceneType Scene::getSceneType()
+{
+	return mSceneType;
+}

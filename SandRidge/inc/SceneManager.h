@@ -10,34 +10,31 @@
 
 #include "CONSTANTS.h"
 #include "Scene.h"
+#include "Game.h"
 #include "AudioManager.h"
-
 
 class SceneManager
 {
+	friend class Scene;
 public :
 	static SceneManager* m_instance;
 	static SceneManager* instance();
 
-	enum SceneType
-	{
-		CURRENT_SCENE,
-		MAIN_MENU_SCENE,
-		GAME_SCENE
-	};
-
+	Scene::SceneType currentSceneType;
 	Scene* currentScene;
-
-	SDL_Window* window;
-	SDL_Renderer* renderer;
-
-#define SceneRenderer (SceneManager::instance()->renderer)
 
 	void update(float dt);
 
 	void close();
+
+	void setScene(Scene* scene);
+	void setScene(Scene::SceneType sceneType);
 private:
 	SceneManager();
+
+	//Scenes
+	Game* gameScene;
+	Scene* menuScene;
 };
 
 #endif //!_SCENE_MANAGER_H_

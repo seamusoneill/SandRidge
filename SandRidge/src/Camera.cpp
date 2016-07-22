@@ -11,6 +11,7 @@ Camera* Camera::instance()
 
 Camera::Camera()
 {
+
 	mPosX = 0;
 	mPosY = 0;
 	CameraBounds.x = 0;

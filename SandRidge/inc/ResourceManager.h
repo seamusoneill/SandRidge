@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "SceneManager.h"
+#include "Renderer.h"
 
 class ResourceManager
 {

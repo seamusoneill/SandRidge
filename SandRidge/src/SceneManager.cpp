@@ -6,50 +6,32 @@ SceneManager::SceneManager()
 {
 	bool success;
 
-	//Create window
-	window = SDL_CreateWindow("Sand Ridge", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, CONSTANTS::SCREEN_WIDTH, CONSTANTS::SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-	if (window == NULL)
+
+	//Initialize PNG loading //TODO move this to resourceManager
+	int imgFlags = IMG_INIT_PNG;
+	if (!(IMG_Init(imgFlags) & imgFlags))
 	{
-		printf("SDL Could not initialize! \nSDL Error: %s\n", SDL_GetError());
+		printf("SDL_image could not initialize! \nSDL_image Error: %s\n", IMG_GetError());
 		success = false;
 	}
-	else
+
+	//TODO Remove this, put it in AudioManager. Also remove it from Main.
+	//Initialise SDL_mixer
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
 	{
-		//Create vsynced renderer for window
-		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-		if (renderer == NULL)
-		{
-			printf("Rendererer could not be created %s\n", SDL_GetError());
-			success = false;
-		}
-		else
-		{
-			//Initialize renderer colour
-			SDL_SetRenderDrawColor(renderer, 0x11, 0xAF, 0xFF, 0xFF);
-
-			//Initialize PNG loading
-			int imgFlags = IMG_INIT_PNG;
-			if (!(IMG_Init(imgFlags) & imgFlags))
-			{
-				printf("SDL_image could not initialize! \nSDL_image Error: %s\n", IMG_GetError());
-				success = false;
-			}
-
-			//Initialise SDL_mixer
-			if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
-			{
-				printf("SDL_mixer could not initialize! \nSDL_mixer Error: %s\n", Mix_GetError());
-				success = false;
-			}
-
-			//Initialize SDL_ttf
-			if (TTF_Init() == -1)
-			{
-				printf("SDL_ttf could not intitialize! \nSDL_ttf Error: %s\n", TTF_GetError());
-				success = false;
-			}
-		}
+		printf("SDL_mixer could not initialize! \nSDL_mixer Error: %s\n", Mix_GetError());
+		success = false;
 	}
+
+	//Initialize SDL_ttf
+	if (TTF_Init() == -1)
+	{
+		printf("SDL_ttf could not intitialize! \nSDL_ttf Error: %s\n", TTF_GetError());
+		success = false;
+	}
+
+	gameScene = new Game();
+	currentScene = gameScene;
 }
 
 SceneManager* SceneManager::instance()
@@ -65,14 +47,37 @@ void SceneManager::update(float dt)
 }
 void SceneManager::close()
 {
-	//Destroy window
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	window = NULL;
-	renderer = NULL;
-
 	//Quit SDL subsystems
-	Mix_Quit();
-	IMG_Quit();
+	Mix_Quit();//TODO Move to AudioManager
+	IMG_Quit();//TODO Move to ResourceManager
 	TTF_Quit();
+}
+
+void SceneManager::setScene(Scene* scene)
+{
+	if (currentScene->disposeScene())
+	{
+		if (scene->createScene())
+		{
+			currentScene = scene;
+			currentSceneType = scene->getSceneType();
+		}
+		else
+			printf("Failed to create " + scene->getSceneType());
+	}
+	else
+		printf("Failed to dispose of " + currentSceneType);
+}
+
+void SceneManager::setScene(Scene::SceneType sceneType)
+{
+	switch (sceneType)
+	{
+	case Scene::SCENE_MAIN_MENU:
+		setScene(menuScene);
+		break;
+	case Scene::SCENE_GAME:
+		setScene(gameScene);
+		break;
+	}
 }
