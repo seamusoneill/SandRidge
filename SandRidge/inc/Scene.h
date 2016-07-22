@@ -7,13 +7,22 @@ class Scene
 public:
 	Scene();
 	~Scene();
+	
+	enum SceneType
+	{
+		SCENE_MAIN_MENU,
+		SCENE_GAME
+	};
 
 	virtual bool update(float dt);
 	void render();
 
+	SceneType getSceneType();
+
+	virtual bool createScene() = 0;
+	virtual bool disposeScene() = 0;
 protected:
-	virtual bool createScene();
-	virtual bool disposeScene();
+	SceneType mSceneType;
 };
 
 #endif //!_SCENE_H_

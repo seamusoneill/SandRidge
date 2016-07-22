@@ -1,6 +1,5 @@
 #include <SDL.h>
 #include <SDL_image.h>
-//#include <SDL_mixer.h>
 #include <SDL_ttf.h>
 #include <stdio.h>
 #include <string>
@@ -12,7 +11,6 @@
 #include "FontTexture.h"
 #include "InputManager.h"
 #include "Timer.h"
-#include "Game.h"
 #include "AudioManager.h"
 
 using namespace std;
@@ -23,7 +21,6 @@ void close();
 
 SDL_Joystick* gameController = NULL;
 SDL_Haptic* controllerHaptic = NULL;
-Game* game;
 
 bool init(){
 	bool success = true; //Initalization flag
@@ -108,24 +105,26 @@ int main(int argc, char* args[])
 			printf("Failed to load media!\n");
 		else
 		{
-			game = new Game();
+			
 		}
 	}
 
 	bool quit = false; //Main loop flag
 
-	int countedFrames = 0;
-
+	float countedFrames = 0;
+	float deltaTime = 0;
 	//While applcation is running
 	while (!quit)
 	{
 
-		if (game->update(countedFrames - SDL_GetTicks()))
+		countedFrames = SDL_GetTicks();
+		if (SceneManager::instance()->currentScene->update(deltaTime / 1000.0f))
 		{
 			quit = true;
 		}
 
-		++countedFrames;
+		deltaTime = SDL_GetTicks() - countedFrames;
+		countedFrames+=deltaTime;
 	}
 
 	close();
@@ -141,6 +140,7 @@ void close()
 	gameController = NULL;
 	controllerHaptic = NULL;
 
+	Renderer::instance()->close();
 	SceneManager::instance()->close();
 
 	//Quit SDL

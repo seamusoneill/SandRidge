@@ -7,7 +7,7 @@
 #include "Player.h"
 #include <vector>
 
-class Game : Scene{
+class Game : public Scene{
 public:
 	Game();
 	~Game();
