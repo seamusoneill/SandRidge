@@ -18,6 +18,7 @@
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameActor.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\MacroCommand.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Renderer.cpp" />
@@ -37,6 +38,7 @@
     <ClInclude Include="inc\Game.h" />
     <ClInclude Include="inc\GameActor.h" />
     <ClInclude Include="inc\InputManager.h" />
+    <ClInclude Include="inc\MacroCommand.h" />
     <ClInclude Include="inc\Player.h" />
     <ClInclude Include="inc\Renderer.h" />
     <ClInclude Include="inc\ResourceManager.h" />
