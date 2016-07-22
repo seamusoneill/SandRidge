@@ -15,6 +15,8 @@
 #include "Game.h"
 #include "AudioManager.h"
 
+#include "ConcreteAObserver.h"
+
 using namespace std;
 
 bool init();
@@ -24,6 +26,7 @@ void close();
 SDL_Joystick* gameController = NULL;
 SDL_Haptic* controllerHaptic = NULL;
 Game* game;
+Scene* scene;
 
 bool init(){
 	bool success = true; //Initalization flag
@@ -109,6 +112,8 @@ int main(int argc, char* args[])
 		else
 		{
 			game = new Game();
+			ConcreteAObserver obs;
+			scene->AddObserver(&obs);
 		}
 	}
 

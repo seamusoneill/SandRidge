@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ConcreteAObserver.cpp" />
+    <ClCompile Include="Observer.cpp" />
     <ClCompile Include="src\AudioManager.cpp" />
     <ClCompile Include="src\BaseObject.cpp" />
     <ClCompile Include="src\Camera.cpp" />
@@ -27,6 +29,7 @@
     <ClCompile Include="src\Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConcreteAObserver.h" />
     <ClInclude Include="inc\AudioManager.h" />
     <ClInclude Include="inc\BaseObject.h" />
     <ClInclude Include="inc\Camera.h" />
@@ -41,6 +44,7 @@
     <ClInclude Include="inc\SceneManager.h" />
     <ClInclude Include="inc\Timer.h" />
     <ClInclude Include="inc\Tree.h" />
+    <ClInclude Include="Observer.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\img\default.png" />
