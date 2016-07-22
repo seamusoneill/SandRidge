@@ -39,13 +39,17 @@ Renderer::Renderer()
 
 Renderer::~Renderer()
 {
+	close();
+}
+
+void Renderer::close()
+{
 	//Destroy window
 	SDL_DestroyRenderer(mRenderer);
 	SDL_DestroyWindow(mWindow);
 	mWindow = NULL;
 	mRenderer = NULL;
 }
-
 SDL_Renderer* Renderer::getRenderer()
 {
 	return mRenderer;

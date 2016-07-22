@@ -12,7 +12,8 @@ public:
 	static Renderer* instance();
 
 #define SceneRenderer Renderer::instance()->getRenderer()
-
+	
+	void close();
 	SDL_Renderer* getRenderer();
 private:
 	Renderer();

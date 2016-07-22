@@ -140,6 +140,7 @@ void close()
 	gameController = NULL;
 	controllerHaptic = NULL;
 
+	Renderer::instance()->close();
 	SceneManager::instance()->close();
 
 	//Quit SDL
