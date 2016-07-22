@@ -1,9 +1,9 @@
 #include "Scene.h"
 
-Scene::Scene()
-{
-	myval = -1;
+Scene::Scene(){
+
 }
+
 
 Scene::~Scene()
 {
@@ -25,12 +25,11 @@ bool Scene::AddObserver(Observer* obs){
 		}
 	}
 	m_observerList.push_back(obs);
-	obs->update(myval);
 	return true;
 }
 
 void Scene::SetPlayValue(int val){
 	myval = val;
 	for (size_t i = 0; i < m_observerList.size(); i++)
-		m_observerList[i]->update(myval);
+		m_observerList[i]->onNotify(myval);
 }

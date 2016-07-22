@@ -72,10 +72,10 @@
     <ClCompile Include="src\Tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Observer.cpp">
+    <ClCompile Include="src\Subject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConcreteAObserver.cpp">
+    <ClCompile Include="src\AudioObserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -122,10 +122,13 @@
     <ClInclude Include="inc\Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Observer.h">
+    <ClInclude Include="inc\Observer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConcreteAObserver.h">
+    <ClInclude Include="inc\Subject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\AudioObserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

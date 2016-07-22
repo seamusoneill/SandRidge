@@ -15,7 +15,7 @@
 #include "Game.h"
 #include "AudioManager.h"
 
-#include "ConcreteAObserver.h"
+#include "AudioObserver.h"//for testing
 
 using namespace std;
 
@@ -112,8 +112,14 @@ int main(int argc, char* args[])
 		else
 		{
 			game = new Game();
-			ConcreteAObserver obs;
-			scene->AddObserver(&obs);
+			AudioObserver obs;
+			//for testing
+			scene = new Scene();
+			obs.attachSubject(&scene->mSceneSubject);
+			//attach subject to observer
+			scene->mSceneSubject.Notify(1);
+			//obs.onNotify(1);///does the same as line above
+			
 		}
 	}
 
