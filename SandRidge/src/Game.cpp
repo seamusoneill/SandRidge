@@ -18,7 +18,6 @@ bool Game::createScene()
 	mPlayer->initialise(NULL,100,100,32,32);
 
 	gameObject.push_back(mPlayer);
-
 	mCommandLog = MacroCommand();
 	AudioManager::instance()->PlayAmbientAudio();
 

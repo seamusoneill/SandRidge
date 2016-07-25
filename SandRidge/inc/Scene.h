@@ -2,6 +2,8 @@
 #ifndef _SCENE_H_
 #define _SCENE_H_
 
+#include "Subject.h"
+#include <vector>
 class Scene
 {
 public:
