@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AudioManager.cpp" />
+    <ClCompile Include="src\AudioObserver.cpp" />
     <ClCompile Include="src\BaseObject.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\FontTexture.cpp" />
@@ -25,11 +26,13 @@
     <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
+    <ClCompile Include="src\Subject.cpp" />
     <ClCompile Include="src\Timer.cpp" />
     <ClCompile Include="src\Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\AudioManager.h" />
+    <ClInclude Include="inc\AudioObserver.h" />
     <ClInclude Include="inc\BaseObject.h" />
     <ClInclude Include="inc\Camera.h" />
     <ClInclude Include="inc\Command.h" />
@@ -38,12 +41,14 @@
     <ClInclude Include="inc\Game.h" />
     <ClInclude Include="inc\GameActor.h" />
     <ClInclude Include="inc\InputManager.h" />
+    <ClInclude Include="inc\Observer.h" />
     <ClInclude Include="inc\MacroCommand.h" />
     <ClInclude Include="inc\Player.h" />
     <ClInclude Include="inc\Renderer.h" />
     <ClInclude Include="inc\ResourceManager.h" />
     <ClInclude Include="inc\Scene.h" />
     <ClInclude Include="inc\SceneManager.h" />
+    <ClInclude Include="inc\Subject.h" />
     <ClInclude Include="inc\Timer.h" />
     <ClInclude Include="inc\Tree.h" />
   </ItemGroup>
