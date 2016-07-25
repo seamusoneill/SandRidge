@@ -42,7 +42,8 @@ bool Player::initialise(SDL_Texture* texture, int posX, int posY, int width, int
 
 void Player::update(float dt)
 {
-	walk();
+	mPosX += mVelX * dt;
+	mPosY += mVelY * dt;
 }
 
 void Player::handleEvent(SDL_Event e)
@@ -54,10 +55,10 @@ void Player::handleEvent(SDL_Event e)
 		switch (e.key.keysym.sym)
 		{
 			//TODO replace with command pattern, remove magic numbers
-		case SDLK_UP: mVelY -= 10; break;
-		case SDLK_DOWN: mVelY += 10; break;
-		case SDLK_LEFT: mVelX -= 10; break;
-		case SDLK_RIGHT: mVelX += 10; break;
+		case SDLK_UP: mVelY -= 1000; break;
+		case SDLK_DOWN: mVelY += 1000; break;
+		case SDLK_LEFT: mVelX -= 1000; break;
+		case SDLK_RIGHT: mVelX += 1000; break;
 		}
 	}
 
@@ -67,10 +68,10 @@ void Player::handleEvent(SDL_Event e)
 		//Adjust the velocity
 		switch (e.key.keysym.sym)
 		{
-		case SDLK_UP: mVelY += 10; break;
-		case SDLK_DOWN: mVelY -= 10; break;
-		case SDLK_LEFT: mVelX += 10; break;
-		case SDLK_RIGHT: mVelX -= 10; break;
+		case SDLK_UP: mVelY += 1000; break;
+		case SDLK_DOWN: mVelY -= 1000; break;
+		case SDLK_LEFT: mVelX += 1000; break;
+		case SDLK_RIGHT: mVelX -= 1000; break;
 		}
 	}
 }
@@ -79,6 +80,11 @@ void Player::walk()
 {
 	mPosX += mVelX;
 	mPosY += mVelY;
+}
+
+void Player::shoot()
+{
+	AudioManager::instance()->PlayShoot();
 }
 
 void Player::punch()

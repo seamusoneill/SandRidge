@@ -2,12 +2,12 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
-#include "SceneManager.h"
+#include "Scene.h"
 #include "InputManager.h"
 #include "Player.h"
 #include <vector>
 
-class Game : Scene{
+class Game : public Scene{
 public:
 	Game();
 	~Game();

@@ -50,7 +50,14 @@ bool Game::update(float dt)
 		{
 			return true;
 		}
-		else mPlayer->handleEvent(e);
+		else
+		{
+			Command* command = InputManager::instance()->HandleInput(&e);
+			if (command)
+				command->execute(*mPlayer);
+			else mPlayer->handleEvent(e); //TODO Remove this function from player and replace everything  with commands
+		}
+		
 	}
 
 	//Update objects

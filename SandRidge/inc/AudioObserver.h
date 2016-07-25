@@ -2,7 +2,7 @@
 #ifndef _AUDIOOBSERVER_H_
 #define _AUDIOOBSERVER_H_
 
-#include "Observer.h"
+#include "Subject.h"
 #include <SDL_mixer.h>
 #include "ResourceManager.h"
 class AudioObserver : public Observer

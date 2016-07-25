@@ -4,6 +4,7 @@
 
 #include "GameActor.h"
 #include "InputManager.h"
+#include "AudioManager.h" //TODO observer pattern
 
 class Player : public GameActor
 {
@@ -22,6 +23,7 @@ private:
 	int mVelX, mVelY;
 
 	void walk();
+	void shoot();
 	void punch();
 };
 

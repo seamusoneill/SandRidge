@@ -66,7 +66,7 @@ protected:
 	SDL_Texture* mTexture;
 
 	//The X and Y offsets of the texture
-	int mPosX, mPosY;
+	float mPosX, mPosY;
 
 	//Image dimensions
 	int mWidth;

@@ -7,17 +7,20 @@
 #include <SDL_keycode.h>
 #include <map>
 
+#include "Command.h"
+
 class InputManager{
 public:
 	static InputManager* m_instance;
 	static InputManager* instance();
 
-
-	void HandleInput(SDL_Event* e);
+	Command* HandleInput(SDL_Event* e);
 private:
 	InputManager();
 	enum key { W, A, S, D };
 	bool isKeyDown(key);
+
+	Command* mSpacebar = new ShootCommand();
 
 	//current keystate
 	const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);

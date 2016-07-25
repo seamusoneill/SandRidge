@@ -19,8 +19,10 @@
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameActor.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\MacroCommand.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\Renderer.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
@@ -33,13 +35,16 @@
     <ClInclude Include="inc\AudioObserver.h" />
     <ClInclude Include="inc\BaseObject.h" />
     <ClInclude Include="inc\Camera.h" />
+    <ClInclude Include="inc\Command.h" />
     <ClInclude Include="inc\CONSTANTS.h" />
     <ClInclude Include="inc\FontTexture.h" />
     <ClInclude Include="inc\Game.h" />
     <ClInclude Include="inc\GameActor.h" />
     <ClInclude Include="inc\InputManager.h" />
     <ClInclude Include="inc\Observer.h" />
+    <ClInclude Include="inc\MacroCommand.h" />
     <ClInclude Include="inc\Player.h" />
+    <ClInclude Include="inc\Renderer.h" />
     <ClInclude Include="inc\ResourceManager.h" />
     <ClInclude Include="inc\Scene.h" />
     <ClInclude Include="inc\SceneManager.h" />

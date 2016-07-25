@@ -9,18 +9,22 @@ class Scene
 public:
 	Scene();
 	~Scene();
-	Subject mSceneSubject;
-	bool AddObserver(Observer* obs);
+	
+	enum SceneType
+	{
+		SCENE_MAIN_MENU,
+		SCENE_GAME
+	};
+
 	virtual bool update(float dt);
 	void render();
 
-	void SetPlayValue(int val);
-private:
-	std::vector<Observer*> m_observerList;
-	int myval;
+	SceneType getSceneType();
+
+	virtual bool createScene() = 0;
+	virtual bool disposeScene() = 0;
 protected:
-	virtual bool createScene();
-	virtual bool disposeScene();
+	SceneType mSceneType;
 };
 
 #endif //!_SCENE_H_
