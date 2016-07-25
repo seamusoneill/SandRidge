@@ -37,6 +37,7 @@
     <ClInclude Include="inc\FontTexture.h" />
     <ClInclude Include="inc\Game.h" />
     <ClInclude Include="inc\GameActor.h" />
+    <ClInclude Include="inc\GameActorCommands.h" />
     <ClInclude Include="inc\InputManager.h" />
     <ClInclude Include="inc\MacroCommand.h" />
     <ClInclude Include="inc\Player.h" />
