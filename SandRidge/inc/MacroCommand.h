@@ -9,8 +9,8 @@
 class MacroCommand : Command
 {
 public:
-	MacroCommand();
-	virtual ~MacroCommand();
+	MacroCommand(){}
+	virtual ~MacroCommand(){}
 	virtual void add(Command*);
 	virtual void remove(Command*);
 	virtual void execute();

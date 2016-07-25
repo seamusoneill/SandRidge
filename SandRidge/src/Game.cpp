@@ -19,7 +19,7 @@ bool Game::createScene()
 
 	gameObject.push_back(mPlayer);
 
-
+	mCommandLog = MacroCommand();
 	AudioManager::instance()->PlayAmbientAudio();
 
 	return success;
@@ -52,12 +52,17 @@ bool Game::update(float dt)
 		}
 		else
 		{
-			Command* command = InputManager::instance()->HandleInput(&e);
-			if (command)
-				command->execute(*mPlayer);
-			else mPlayer->handleEvent(e); //TODO Remove this function from player and replace everything  with commands
+			InputCommand inputCommand = InputManager::instance()->HandleInput(&e);
+			if (inputCommand.command)
+			{
+				if (inputCommand.executing == true)
+					inputCommand.command->execute(*mPlayer);
+				else
+					inputCommand.command->undo(*mPlayer);
+				
+				mCommandLog.add(inputCommand.command);
+			}
 		}
-		
 	}
 
 	//Update objects

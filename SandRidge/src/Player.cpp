@@ -27,7 +27,7 @@ bool Player::initialise(SDL_Texture* texture, int posX, int posY, int width, int
 	bool success = true;
 
 	mTexture = texture;
-	loadFromFile("res/img/dot.png");
+	loadFromFile("res/img/dot.png"); //TODO, should not reload this file on every init.
 	mPosX = posX;
 	mPosY = posY; 
 	mWidth = width;
@@ -46,46 +46,55 @@ void Player::update(float dt)
 	mPosY += mVelY * dt;
 }
 
-void Player::handleEvent(SDL_Event e)
-{
-	//If a key was pressed
-	if (e.type == SDL_KEYDOWN && e.key.repeat == 0)
-	{
-		//Adjust the velocity
-		switch (e.key.keysym.sym)
-		{
-			//TODO replace with command pattern, remove magic numbers
-		case SDLK_UP: mVelY -= 1000; break;
-		case SDLK_DOWN: mVelY += 1000; break;
-		case SDLK_LEFT: mVelX -= 1000; break;
-		case SDLK_RIGHT: mVelX += 1000; break;
-		}
-	}
-
-	//If a key was released
-	else if (e.type == SDL_KEYUP && e.key.repeat == 0)
-	{
-		//Adjust the velocity
-		switch (e.key.keysym.sym)
-		{
-		case SDLK_UP: mVelY += 1000; break;
-		case SDLK_DOWN: mVelY -= 1000; break;
-		case SDLK_LEFT: mVelX += 1000; break;
-		case SDLK_RIGHT: mVelX -= 1000; break;
-		}
-	}
-}
-
-void Player::walk()
-{
-	mPosX += mVelX;
-	mPosY += mVelY;
-}
-
 void Player::shoot()
 {
 	AudioManager::instance()->PlayShoot();
 }
 
+void Player::walk(Direction direction)
+{
+	switch (direction)
+	{
+	case DIRECTION_RIGHT:
+		mVelX = mMovementSpeed;
+		break;
+	case DIRECTION_LEFT:
+		mVelX = -mMovementSpeed;
+		break;
+	case DIRECTION_UP:
+		mVelY = -mMovementSpeed;
+		break;
+	case DIRECTION_DOWN:
+		mVelY = mMovementSpeed;
+		break;
+	default:
+		break;
+	}
+}
+
+void Player::stopWalk(Direction direction)
+{
+	switch (direction)
+	{
+	case DIRECTION_RIGHT:
+		if (mVelX > 0)
+			mVelX = 0;
+		break;
+	case DIRECTION_LEFT:
+		if (mVelX < 0)
+			mVelX = -0;
+		break;
+	case DIRECTION_UP:
+		if (mVelY < 0)
+			mVelY = 0;
+		break;
+	case DIRECTION_DOWN:
+		if (mVelY > 0)
+			mVelY = 0;
+		break;
+	default:
+		break;
+	}
+}
 void Player::punch()
 {}

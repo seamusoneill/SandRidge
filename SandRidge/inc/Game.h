@@ -5,6 +5,7 @@
 #include "Scene.h"
 #include "InputManager.h"
 #include "Player.h"
+#include "MacroCommand.h"
 #include <vector>
 
 class Game : public Scene{
@@ -21,5 +22,7 @@ private:
 	std::vector<BaseObject*> gameObject;
 
 	Player* mPlayer;
+
+	MacroCommand mCommandLog;
 };
 #endif //!_GAME_H_
