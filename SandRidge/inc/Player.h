@@ -16,13 +16,15 @@ public:
 		float angle = 0.0f, SDL_Point* centrePoint = NULL, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
 
 	void update(float dt);
-	
-	void handleEvent(SDL_Event e);
+
 private:
 	//Movement velocity
 	int mVelX, mVelY;
 
-	void walk();
+	const int mMovementSpeed = 100;
+
+	void walk(Direction direction);
+	void stopWalk(Direction direction);
 	void shoot();
 	void punch();
 };

@@ -72,6 +72,9 @@ protected:
 	int mWidth;
 	int mHeight;
 
+	//The X and Y velocity of the object
+	int mVelX, mVelY;
+
 	//Image angle
 	float mAngle;
 

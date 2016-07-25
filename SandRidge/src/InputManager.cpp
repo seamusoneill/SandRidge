@@ -10,21 +10,59 @@ InputManager* InputManager::instance() {
 	return m_instance;
 }
 
-Command* InputManager::HandleInput(SDL_Event* e)
+InputCommand InputManager::HandleInput(SDL_Event* e)
 {
+	InputCommand inputCommand;
 	switch (e->type)
 	{
+		//If a key was pressed
 	case SDL_KEYDOWN:
-		if (e->key.keysym.sym == SDLK_SPACE)
+		inputCommand.executing = true;
+		if (e->key.repeat == 0)
 		{
-			currentKeyStates = SDL_GetKeyboardState(NULL);
-			return mSpacebar;
+			switch (e->key.keysym.sym)
+			{
+			case SDLK_SPACE:
+				inputCommand.command = mSpacebar;
+				break;
+			case SDLK_LEFT:
+				inputCommand.command = mLeftArrow;
+				break;
+			case SDLK_RIGHT:
+				inputCommand.command = mRightArrow;
+				break;
+			case SDLK_UP:
+				inputCommand.command = mUpArrow;
+				break;
+			case SDLK_DOWN:
+				inputCommand.command = mDownArrow;
+			}
 		}
 		break;
+		//If a key was released
 	case SDL_KEYUP:
+		inputCommand.executing = false;
+		if (e->key.repeat == 0)
+		{
+			switch (e->key.keysym.sym)
+			{
+			case SDLK_LEFT:
+				inputCommand.command = mLeftArrow;
+				break;
+			case SDLK_RIGHT:
+				inputCommand.command = mRightArrow;
+				break;
+			case SDLK_UP:
+				inputCommand.command = mUpArrow;
+				break;
+			case SDLK_DOWN:
+				inputCommand.command = mDownArrow;
+				break;
+			}
+		}
 		break;
 	default:
 		break;
 	}
-	return NULL;
+	return inputCommand;
 }
