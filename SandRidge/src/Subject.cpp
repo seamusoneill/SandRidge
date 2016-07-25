@@ -1,5 +1,4 @@
 #include "Subject.h"
-#include <algorithm>
 using namespace std;
 
 Subject::Subject()
@@ -13,16 +12,16 @@ Subject::~Subject()
 
 void Subject::Attach(Observer *o)//attaches observer to the subject
 {
-	list.push_back(o);
+	m_observers.push_back(o);
 }
 void Subject::Detach(Observer *o)//detaches observer from the subject
 {
-	list.erase(std::remove(list.begin(), list.end(), o), list.end());
+	m_observers.erase(std::remove(m_observers.begin(), m_observers.end(), o), m_observers.end());
 }
 
 void Subject::Notify(int val)//notifies list of observers of change
 {
-	for (vector<Observer*>::const_iterator iter = list.begin(); iter != list.end(); ++iter){
+	for (vector<Observer*>::const_iterator iter = m_observers.begin(); iter != m_observers.end(); ++iter){
 		if (*iter != 0){
 			(*iter)->onNotify(val);
 		}

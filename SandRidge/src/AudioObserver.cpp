@@ -16,6 +16,6 @@ void AudioObserver::onNotify(int val){//Updates what the AudioObserver should pl
 		Mix_PlayMusic(ResourceManager::instance()->getMusic("ambient"), -1); //-1 continuously loops.
 	}
 }
-void AudioObserver::attachSubject(Subject* sub){
+void AudioObserver::attachToSubject(Subject* sub){
 	sub->Attach(this);
 }

@@ -15,7 +15,7 @@
 #include "Game.h"
 #include "AudioManager.h"
 
-#include "AudioObserver.h"//for testing
+
 
 using namespace std;
 
@@ -26,7 +26,6 @@ void close();
 SDL_Joystick* gameController = NULL;
 SDL_Haptic* controllerHaptic = NULL;
 Game* game;
-Scene* scene;
 
 bool init(){
 	bool success = true; //Initalization flag
@@ -112,13 +111,6 @@ int main(int argc, char* args[])
 		else
 		{
 			game = new Game();
-			AudioObserver obs;
-			//for testing
-			scene = new Scene();
-			obs.attachSubject(&scene->mSceneSubject);
-			//attach subject to observer
-			scene->mSceneSubject.Notify(1);
-			//obs.onNotify(1);///does the same as line above
 			
 		}
 	}
