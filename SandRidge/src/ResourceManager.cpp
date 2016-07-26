@@ -99,6 +99,9 @@ void ResourceManager::setMediaToLoad()
 	//images (.png only!)
 	m_imageNames.push_back("default");
 	m_imageNames.push_back("dot");
+	m_imageNames.push_back("tile_red");
+	m_imageNames.push_back("tile_blue");
+	m_imageNames.push_back("tile_green");
 
 	//sfx (.wav only!)
 	m_sfxNames.push_back("high");

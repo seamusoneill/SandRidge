@@ -172,6 +172,15 @@
     <Image Include="res\img\trees.png">
       <Filter>Resource Files\img</Filter>
     </Image>
+    <Image Include="res\img\tile_blue.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\tile_green.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="res\img\tile_red.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\font\default.ttf">
