@@ -9,9 +9,11 @@ class Renderer
 {
 public:
 	static Renderer* instance();
-	static const int SCREEN_WIDTH = 800;
-	static const int SCREEN_HEIGHT = 600;
+
 #define SceneRenderer Renderer::instance()->getRenderer()
+
+	static const int SCREEN_HEIGHT = 600;
+	static const int SCREEN_WIDTH = 800;
 	
 	void close();
 	SDL_Renderer* getRenderer();

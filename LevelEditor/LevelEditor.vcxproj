@@ -71,11 +71,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\FontTexture.cpp" />
+    <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\MacroCommand.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\MenuWindow.cpp" />
     <ClCompile Include="src\Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\Camera.h" />
+    <ClInclude Include="inc\Command.h" />
+    <ClInclude Include="inc\FontTexture.h" />
+    <ClInclude Include="inc\InputManager.h" />
+    <ClInclude Include="inc\MacroCommand.h" />
+    <ClInclude Include="inc\MapWindow.h" />
+    <ClInclude Include="inc\MenuWindow.h" />
     <ClInclude Include="inc\Renderer.h" />
+    <ClInclude Include="inc\SelectionWindow.h" />
+    <ClInclude Include="inc\Thumbnail.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

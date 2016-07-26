@@ -1,4 +1,10 @@
 #include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
+#include <stdio.h>
+#include <string>
+#include <sstream>
+
 #include "Renderer.h"
 
 using namespace std;
@@ -24,12 +30,22 @@ bool init(){
 		}
 		else
 		{
+			//Initialise Renderer
 			Renderer::instance();
 		}
-	}		
+	}
 
 	return success;
 }
+
+bool loadMedia()
+{
+	bool success = true; //Loading success flag
+
+	return success;
+}
+
+
 
 int main(int argc, char* args[])
 {
@@ -41,12 +57,22 @@ int main(int argc, char* args[])
 	//While applcation is running
 	while (!quit)
 	{
-SDL_Delay(1000);
+		SDL_Event e; //Event handler
+		//Handle events on queue
+		while (SDL_PollEvent(&e) != 0)
+		{
+			//User requests quit
+			if (e.type == SDL_QUIT)
+			{
+				return true;
+			}
+		}
 	}
-	
+
 	close();
 	return 0;
 }
+
 
 void close()
 {
