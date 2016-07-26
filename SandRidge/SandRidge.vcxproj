@@ -56,6 +56,9 @@
   <ItemGroup>
     <Image Include="res\img\default.png" />
     <Image Include="res\img\dot.png" />
+    <Image Include="res\img\tile_blue.png" />
+    <Image Include="res\img\tile_green.png" />
+    <Image Include="res\img\tile_red.png" />
     <Image Include="res\img\tree1.png" />
     <Image Include="res\img\tree2.png" />
     <Image Include="res\img\tree3.png" />
@@ -104,8 +107,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>SDL_dev\SDL2-2.0.3\include;SDL_dev\SDL2_image-2.0.0\include;SDL_dev\SDL2_ttf-2.0.12\include;SDL_dev\SDL2_mixer-2.0.0\include;$(IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>SDL_dev\SDL2_image-2.0.0\lib\x86;SDL_dev\SDL2-2.0.3\lib\x86;SDL_dev\SDL2_ttf-2.0.12\lib\x86;SDL_dev\SDL2_mixer-2.0.0\lib\x86;$(LibraryPath);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <IncludePath>$(SolutionDir)\SDL_dev\SDL2-2.0.3\include;$(SolutionDir)\SDL_dev\SDL2_image-2.0.0\include;$(SolutionDir)\SDL_dev\SDL2_ttf-2.0.12\include;$(SolutionDir)\SDL_dev\SDL2_mixer-2.0.0\include;$(IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\SDL_dev\SDL2_image-2.0.0\lib\x86;$(SolutionDir)\SDL_dev\SDL2-2.0.3\lib\x86;$(SolutionDir)\SDL_dev\SDL2_ttf-2.0.12\lib\x86;$(SolutionDir)\SDL_dev\SDL2_mixer-2.0.0\lib\x86;$(LibraryPath);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

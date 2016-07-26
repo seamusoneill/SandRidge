@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SandRidge", "SandRidge\SandRidge.vcxproj", "{526CA2EF-1E0D-4BFB-A026-DADA1C230AED}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LevelEditor", "LevelEditor\LevelEditor.vcxproj", "{EFB2D660-ABB7-4B55-9D4B-10C9E7D6C3BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{526CA2EF-1E0D-4BFB-A026-DADA1C230AED}.Debug|Win32.Build.0 = Debug|Win32
 		{526CA2EF-1E0D-4BFB-A026-DADA1C230AED}.Release|Win32.ActiveCfg = Release|Win32
 		{526CA2EF-1E0D-4BFB-A026-DADA1C230AED}.Release|Win32.Build.0 = Release|Win32
+		{EFB2D660-ABB7-4B55-9D4B-10C9E7D6C3BD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EFB2D660-ABB7-4B55-9D4B-10C9E7D6C3BD}.Debug|Win32.Build.0 = Debug|Win32
+		{EFB2D660-ABB7-4B55-9D4B-10C9E7D6C3BD}.Release|Win32.ActiveCfg = Release|Win32
+		{EFB2D660-ABB7-4B55-9D4B-10C9E7D6C3BD}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
