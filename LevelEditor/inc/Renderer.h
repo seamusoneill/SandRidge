@@ -13,7 +13,7 @@ public:
 #define SceneRenderer Renderer::instance()->getRenderer()
 
 	static const int SCREEN_HEIGHT = 600;
-	static const int SCREEN_WIDTH = 800;
+	static const int SCREEN_WIDTH = 1200;
 	
 	void close();
 	SDL_Renderer* getRenderer();
