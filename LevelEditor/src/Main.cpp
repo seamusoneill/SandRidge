@@ -6,6 +6,7 @@
 #include <sstream>
 
 #include "Renderer.h"
+#include "WindowManager.h"
 
 using namespace std;
 
@@ -32,6 +33,8 @@ bool init(){
 		{
 			//Initialise Renderer
 			Renderer::instance();
+			//Initialise WindowManager
+			WindowManager::instance();
 		}
 	}
 
@@ -57,16 +60,8 @@ int main(int argc, char* args[])
 	//While applcation is running
 	while (!quit)
 	{
-		SDL_Event e; //Event handler
-		//Handle events on queue
-		while (SDL_PollEvent(&e) != 0)
-		{
-			//User requests quit
-			if (e.type == SDL_QUIT)
-			{
-				return true;
-			}
-		}
+		if (WindowManager::instance()->update())
+			quit = true;
 	}
 
 	close();

@@ -10,6 +10,7 @@ class SelectionWindow : public MenuWindow
 {
 public:
 	SelectionWindow();
+	bool initialise(SDL_Rect* windowRect, std::vector<GameObject> gameObjects);
 private:
 	std::vector<Thumbnail> thumbnails;
 };

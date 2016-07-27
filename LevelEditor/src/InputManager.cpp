@@ -14,7 +14,10 @@ InputCommand InputManager::HandleInput(SDL_Event* e)
 {
 	InputCommand inputCommand;
 	switch (e->type)
-	{
+	{	
+	case SDL_BUTTON_LEFT:
+		//Left mouse click
+		break;
 		//If a key was pressed
 	case SDL_KEYDOWN:
 		inputCommand.executing = true;

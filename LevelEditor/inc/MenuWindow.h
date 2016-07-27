@@ -4,7 +4,7 @@
 
 #include <SDL.h>
 #include "Camera.h"
-
+#include "GameObject.h"
 class MenuWindow{
 public :
 	MenuWindow();

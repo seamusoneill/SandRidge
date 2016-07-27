@@ -78,18 +78,24 @@
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\MenuWindow.cpp" />
     <ClCompile Include="src\Renderer.cpp" />
+    <ClCompile Include="src\SelectionWindow.cpp" />
+    <ClCompile Include="src\Thumbnail.cpp" />
+    <ClCompile Include="src\WindowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Camera.h" />
     <ClInclude Include="inc\Command.h" />
     <ClInclude Include="inc\FontTexture.h" />
+    <ClInclude Include="inc\GameObject.h" />
     <ClInclude Include="inc\InputManager.h" />
     <ClInclude Include="inc\MacroCommand.h" />
     <ClInclude Include="inc\MapWindow.h" />
     <ClInclude Include="inc\MenuWindow.h" />
     <ClInclude Include="inc\Renderer.h" />
     <ClInclude Include="inc\SelectionWindow.h" />
+    <ClInclude Include="inc\CommandWindow.h" />
     <ClInclude Include="inc\Thumbnail.h" />
+    <ClInclude Include="inc\WindowManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
