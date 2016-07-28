@@ -1,7 +1,7 @@
 #pragma once
 #ifndef _OBSERVER_H_
 #define _OBSERVER_H_
-class Observer//including here doesnt work.
+class Observer
 {
 public:
 	virtual void onNotify(int val) = 0;

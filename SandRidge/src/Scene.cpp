@@ -10,9 +10,9 @@ Scene::~Scene()
 
 }
 
-bool Scene::update(float dt)
+Scene::SceneType Scene::update(float dt)
 {
-	return false;
+	return SCENE_GAME;
 }
 
 void Scene::render()

@@ -2,16 +2,14 @@
 #ifndef _SCENE_MANAGER_H_
 #define _SCENE_MANAGER_H_
 
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
-#include <SDL_ttf.h>
+//#include <SDL.h>
+
 #include <stdio.h>
 
 #include "CONSTANTS.h"
 #include "Scene.h"
 #include "Game.h"
-#include "AudioManager.h"
+#include "Menu.h"
 
 class SceneManager
 {
@@ -23,7 +21,7 @@ public :
 	Scene::SceneType currentSceneType;
 	Scene* currentScene;
 
-	void update(float dt);
+	Scene::SceneType update(float dt);
 
 	void close();
 
@@ -34,7 +32,7 @@ private:
 
 	//Scenes
 	Game* gameScene;
-	Scene* menuScene;
+	Menu* menuScene;
 };
 
 #endif //!_SCENE_MANAGER_H_
