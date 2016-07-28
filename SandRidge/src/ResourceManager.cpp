@@ -8,10 +8,34 @@ ResourceManager* ResourceManager::m_instance = 0;
 
 ResourceManager::ResourceManager(void)
 {
+	//Initialize PNG loading //TODO move this to resourceManager
+	int imgFlags = IMG_INIT_PNG;
+	if (!(IMG_Init(imgFlags) & imgFlags))
+	{
+		printf("SDL_image could not initialize! \nSDL_image Error: %s\n", IMG_GetError());
+	}
+
+	//TODO Remove this, put it in AudioManager. Also remove it from Main.
+	//Initialise SDL_mixer
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+	{
+		printf("SDL_mixer could not initialize! \nSDL_mixer Error: %s\n", Mix_GetError());
+	}
+
+	//Initialize SDL_ttf
+	if (TTF_Init() == -1)
+	{
+		printf("SDL_ttf could not intitialize! \nSDL_ttf Error: %s\n", TTF_GetError());
+	}
+
 }
 
 ResourceManager::~ResourceManager(void)
 {
+	//Quit SDL subsystems
+	Mix_Quit();
+	IMG_Quit();
+	TTF_Quit();
 }
 
 ResourceManager* ResourceManager::instance(){

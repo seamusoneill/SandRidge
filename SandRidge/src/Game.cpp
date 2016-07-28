@@ -2,7 +2,7 @@
 
 Game::Game()
 {
-	createScene();
+	//createScene();
 }
 
 Game::~Game()
@@ -19,7 +19,9 @@ bool Game::createScene()
 
 	gameObject.push_back(mPlayer);
 	mCommandLog = MacroCommand();
-	AudioManager::instance()->PlayAmbientAudio();
+	//AudioManager::instance()->PlayAmbientAudio();
+
+	mSceneType = SCENE_GAME;
 
 	return success;
 }
@@ -37,7 +39,7 @@ bool Game::disposeScene()
 	return success;
 }
 
-bool Game::update(float dt)
+Scene::SceneType Game::update(float dt)
 {
 	SDL_Event e; //Event handler
 
@@ -47,7 +49,11 @@ bool Game::update(float dt)
 		//User requests quit
 		if (e.type == SDL_QUIT)
 		{
-			return true;
+			return SCENE_QUIT;
+		}
+		if (e.key.keysym.sym == SDLK_ESCAPE)//change this to input manager
+		{
+			return SCENE_MAIN_MENU;
 		}
 		else
 		{
@@ -83,5 +89,5 @@ bool Game::update(float dt)
 	//Update screen
 	SDL_RenderPresent(SceneRenderer);
 
-	return false;
+	return SCENE_GAME;
 }

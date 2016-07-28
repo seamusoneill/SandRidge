@@ -3,6 +3,7 @@
 #define _SCENE_H_
 
 #include "Subject.h"
+#include "InputManager.h"
 #include <vector>
 class Scene
 {
@@ -13,10 +14,11 @@ public:
 	enum SceneType
 	{
 		SCENE_MAIN_MENU,
-		SCENE_GAME
+		SCENE_GAME,
+		SCENE_QUIT
 	};
 
-	virtual bool update(float dt);
+	virtual SceneType update(float dt);
 	void render();
 
 	SceneType getSceneType();

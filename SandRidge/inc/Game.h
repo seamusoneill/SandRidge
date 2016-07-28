@@ -3,7 +3,7 @@
 #define _GAME_H_
 
 #include "Scene.h"
-#include "InputManager.h"
+
 #include "Player.h"
 #include "MacroCommand.h"
 #include <vector>
@@ -16,7 +16,7 @@ public:
 	bool createScene();
 	bool disposeScene();
 
-	bool update(float dt);
+	Scene::SceneType update(float dt);
 
 private:
 	std::vector<BaseObject*> gameObject;

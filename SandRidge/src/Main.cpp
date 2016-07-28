@@ -120,7 +120,7 @@ int main(int argc, char* args[])
 	{
 
 		countedFrames = SDL_GetTicks();
-		if (SceneManager::instance()->currentScene->update(deltaTime / 1000.0f))
+		if (SceneManager::instance()->update(deltaTime / 1000.0f) == Scene::SCENE_QUIT)
 		{
 			quit = true;
 		}
