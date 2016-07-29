@@ -47,7 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>.\;.\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;.\inc;$(SolutionDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -86,7 +86,6 @@
     <ClInclude Include="inc\Camera.h" />
     <ClInclude Include="inc\Command.h" />
     <ClInclude Include="inc\FontTexture.h" />
-    <ClInclude Include="inc\GameObject.h" />
     <ClInclude Include="inc\InputManager.h" />
     <ClInclude Include="inc\MacroCommand.h" />
     <ClInclude Include="inc\MapWindow.h" />
@@ -96,6 +95,16 @@
     <ClInclude Include="inc\CommandWindow.h" />
     <ClInclude Include="inc\Thumbnail.h" />
     <ClInclude Include="inc\WindowManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SandRidge\SandRidge.vcxproj">
+      <Project>{526ca2ef-1e0d-4bfb-a026-dada1c230aed}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

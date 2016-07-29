@@ -10,6 +10,8 @@ WindowManager* WindowManager::instance()
 }
 WindowManager::WindowManager()
 {
+	s = SelectionWindow();
+	s.initialise(new SDL_Rect());
 }
 
 WindowManager::~WindowManager()
@@ -31,6 +33,7 @@ bool WindowManager::update()
 
 			InputManager::instance()->HandleInput(&e);
 	}
+	s.update();
 	//If mouse is over windowX make windowX the current window.
 	//If a mouse click is called then call the command on the correct window.
 

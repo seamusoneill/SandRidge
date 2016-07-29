@@ -6,19 +6,31 @@
 #include <SDL_image.h>
 
 #include "Camera.h"
-
+#include "ObjectType.h"
+#include "ResourceManager.h" //Renderer is included in resource manager and camera //todo
 class BaseObject 
 {
 public:
 	BaseObject();
 	~BaseObject();
 
-	//Initialise method
+	//Initialise methods
 	virtual bool initialise(SDL_Texture* texture = NULL, int posX = 0, int posY = 0, int width = 0, int height = 0,
-		float angle = 0.0f, SDL_Point* centrePoint = NULL, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE) = 0; 
+		float angle = 0.0f, SDL_Point* centrePoint = NULL, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE) {
+		return true;
+	};
+	
+	bool initialise(ObjectType* type, int posX, int posY)
+	{
+		bool success = true;
+		mTexture = ResourceManager::instance()->getTexture(type->getTextureId());
+		mPosX = posX;
+		mPosY = posY;
+		return success;
+	}
 
 	//Update method
-	virtual void update(float dt) = 0;
+	virtual void update(float dt) {};
 
 	//Load image at specified path and set texture
 	bool loadFromFile(std::string path);
@@ -61,6 +73,8 @@ public:
 	BaseObject* getThis();
 
 protected:
+	//Type Object, contains texture and id
+	ObjectType mType;
 
 	//Texture
 	SDL_Texture* mTexture;

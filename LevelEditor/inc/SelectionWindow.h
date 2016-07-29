@@ -5,12 +5,16 @@
 #include "MenuWindow.h"
 #include <vector>
 #include "Thumbnail.h"
+#include <SDL_image.h> //TODO remove this when moving texture loading location
+#include "SandRidge\inc\ObjectType.h"
+#include "SandRidge\inc\CreateObjectTypes.h"
 
 class SelectionWindow : public MenuWindow
 {
 public:
 	SelectionWindow();
-	bool initialise(SDL_Rect* windowRect, std::vector<GameObject> gameObjects);
+	bool initialise(SDL_Rect* windowRect);
+	bool update();
 private:
 	std::vector<Thumbnail> thumbnails;
 };

@@ -27,6 +27,7 @@ bool MenuWindow::update()
 {
 	return false;
 }
-void MenuWindow::render()
+void MenuWindow::render(SDL_Texture* texture, int x, int y, int width, int height)
 {
+	mCamera->render(texture, x, y, width, height);
 }

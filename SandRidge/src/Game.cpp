@@ -2,7 +2,6 @@
 
 Game::Game()
 {
-	createScene();
 }
 
 Game::~Game()
@@ -16,7 +15,8 @@ bool Game::createScene()
 
 	mPlayer = new Player();
 	mPlayer->initialise(NULL,100,100,32,32);
-
+	//ObjectType playerType = ObjectType(ResourceManager::instance()->getTexture("dot"), "player");
+	//mPlayer->BaseObject::initialise(playerType, 32, 32);
 	gameObject.push_back(mPlayer);
 	mCommandLog = MacroCommand();
 	AudioManager::instance()->PlayAmbientAudio();

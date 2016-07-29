@@ -4,7 +4,7 @@
 
 #include <SDL.h>
 #include "Camera.h"
-#include "GameObject.h"
+
 class MenuWindow{
 public :
 	MenuWindow();
@@ -12,8 +12,8 @@ public :
 	~MenuWindow();
 	bool initialise(SDL_Rect* windowRect);
 	bool update();
-	void render();
-private:
+	void render(SDL_Texture* texture, int x, int y, int width, int height);
+protected:
 	SDL_Rect* mWindowRect;
 	Camera* mCamera;
 };

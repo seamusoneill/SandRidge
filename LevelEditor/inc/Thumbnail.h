@@ -3,17 +3,16 @@
 #define _THUMBNAIL_H_
 
 #include <SDL.h>
-#include <GameObject.h>
-
+#include <string>
+#include "Camera.h" //TODO
 class Thumbnail
 {
 public:
 	Thumbnail();
-	Thumbnail(SDL_Texture* texture);
-	Thumbnail(GameObject obj);
+	Thumbnail(SDL_Texture* texture, std::string id);
 	~Thumbnail();
-	bool initialise();
-
+	bool initialise(SDL_Rect* window);
+	void render(Camera* cam);
 private:
 	SDL_Rect* mWindow;
 	SDL_Texture* mTexture;

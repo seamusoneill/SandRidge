@@ -11,7 +11,7 @@ Camera::~Camera() {}
 bool Camera::initialise(SDL_Rect* cameraWindow)
 {
 	bool success = true;
-	mCameraBounds = cameraWindow;
+	//mCameraBounds = cameraWindow;
 	mPosX = cameraWindow->x;
 	mPosY = cameraWindow->y;
 	return success;
